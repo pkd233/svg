@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> SVG </title>
+    <style type="text/css">
+
+      h1{
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: normal;
+      }
+
+      body {
+        background-image: url("space.jpg");
+      }
+
+      #circles:hover {
+        transition: all 1s ease;
+        opacity:1;
+        transform: rotate(10deg);
+      }
+
+      #cluster:hover {
+        transition: all 1s ease;
+        opacity:1;
+        transform: rotate(50deg);
+      }
+
+      #cluster:active {
+
+        transform: rotate(10deg);
+        opacity:.4;
+      }
+
+      #shapes:hover {
+        transition: all 1s ease;
+        opacity:1;
+        transform:rotate(42deg);
+      }
+
+    </style>
+  </head>
+
+
+  <body>
+    <h1> Drawing on the Web | SVG | Assignment #2 </h1>
+
+    <svg width="1000" height="1000">
+
+      <g id="circles">
+          <circle cx="400" cy="150" r="120" fill="blue" fill-opacity="0.8"/>
+          <circle cx="450" cy="200" r="150" fill="green" fill-opacity="0.3"/>
+          <circle cx="500" cy="250" r="200" fill="cyan" fill-opacity="0.8"/>
+      </g>
+
+        <a xlink:href="https://www.youtube.com/watch?v=pmuFOuh3QHs">
+          <g id="cluster">
+            <polygon points="10,150 270,270 60,270" fill="magenta"/>
+            <polygon points="200,150 564,27 60,270" fill="magenta" fill-opacity=".5"/>
+            <polygon points="66,40 270,270 60,310" fill="pink" fill-opacity=".5"/>
+          </g>
+        </a>
+
+
+      <g id="shapes">
+        <rect x="400" y="400" width="150" height="150" fill="blue" fill-opacity=".5"/>
+        <polygon points="420,450 420,550 500,350 600, 350" fill="blue"/>
+        <polygon points="460,500 550,330 660, 310" fill="blue" fill-opacity=".8"/>
+      </g>
+
+    </svg>
+
+  </body>
+  </html>
